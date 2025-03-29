@@ -20,8 +20,7 @@ from scripts.reactor_helpers import (
     get_images_from_folder,
     get_random_image_from_folder,
     get_images_from_list,
-    set_SDNEXT,
-    check_nsfwdet_model
+    set_SDNEXT
 )
 from scripts.console_log_patch import apply_logging_patch
 
@@ -57,8 +56,8 @@ if DEVICE == "CUDA":
 else:
     PROVIDERS = ["CPUExecutionProvider"]
 
-NSFWDET_MODEL_PATH = os.path.join(models_path, "nsfw_detector","vit-base-nsfw-detector")
-check_nsfwdet_model(NSFWDET_MODEL_PATH)
+# NSFWDET_MODEL_PATH = os.path.join(models_path, "nsfw_detector","vit-base-nsfw-detector")
+# check_nsfwdet_model(NSFWDET_MODEL_PATH)
 
 @dataclass
 class EnhancementOptions:
